@@ -22,8 +22,8 @@ def generate(seed, out_len=None):
     return output
 
 
-if __name__ == '__main__':
-    # seed = int(input("Seed: "))
-    for seed in range(0, 100):
-        val = generate(seed)
-        print(seed, val, bin(val))
+# if __name__ == '__main__':
+#     # seed = int(input("Seed: "))
+#     for seed in range(0, 100):
+#         val = generate(seed)
+#         print(seed, val, bin(val))

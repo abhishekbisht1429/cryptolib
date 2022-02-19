@@ -15,20 +15,20 @@ def g1(g):
     return g & mask
 
 
-def pf(x, key):
+def pf(n, x, key):
     """pseudorandom function"""
     res = key
     while x > 0:
-        g = generate(res, key.bit_length())
+        g = generate(res, n)
         res = g0(g) if (x & 1) == 0 else g1(g)
         x >>= 1
 
     return res
 
 
-if __name__ == '__main__':
-    # x = int(input("N: "))
-    # key = int(input("key (64 bit): "))
-
-    for x in range(0, 100):
-        print(pf(x, 221))
+# if __name__ == '__main__':
+#     # x = int(input("N: "))
+#     # key = int(input("key (64 bit): "))
+#
+#     for x in range(0, 100):
+#         print(pf(8, x, 221))
