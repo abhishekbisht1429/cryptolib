@@ -35,7 +35,7 @@ def mac(n, key, message):
         tag = tag ^ message_part_int
         tag = prf.pf(n_bits, tag, key_int)
 
-    return tag
+    return tag.to_bytes(n, sys.byteorder)
 
     # if key.bit_length() != message.bit_length():
     #     return None
