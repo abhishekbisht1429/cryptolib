@@ -17,7 +17,7 @@ def encrypt(n, k, m) -> bytes:
     """
     Encryptes message m using key k
     :param n: int, security parameter (number of bytes in a block)
-    :param k: int, secret key
+    :param k: bytes, secret key
     :param m: bytes, message as a bytes object
     :return: bytes, cipher text
     """
